@@ -13,3 +13,37 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}.menu a.current{color:var(--
 /* Page aventure */
 .story{overflow:hidden;border:1px solid var(--trait);border-radius:18px;background:#fff;box-shadow:0 7px 22px rgba(0,56,79,.08)}.story-cover{display:grid;min-height:390px;place-items:end start;padding:20px;color:#fff;background:linear-gradient(145deg,#a9c4b7,#45695b);font:700 .72rem Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}.story-cover.orange{background:linear-gradient(145deg,#f0c985,#a65c2a)}.story-cover.blue{background:linear-gradient(145deg,#b1d4e2,#376f8b)}.story-cover.red{background:linear-gradient(145deg,#dda795,#7f393e)}.story-cover.violet{background:linear-gradient(145deg,#cab9d2,#684978)}.story-body{padding:clamp(24px,4vw,40px)}.story-body h2{margin:0 0 13px;color:var(--marine);font-size:clamp(2rem,4vw,3.5rem);line-height:1}.story-lead{font-size:1.16rem;line-height:1.65;color:#334b53}.story-copy p{line-height:1.72}.story-copy h3{margin-top:30px;color:var(--marine)}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}.photo-slot{display:grid;min-height:175px;place-items:center;padding:12px;border-radius:12px;background:#d9d3c8;color:#566267;font:700 .69rem Arial,sans-serif;text-transform:uppercase}.photo-slot:nth-child(2n){background:#cbd9d1}.photo-slot:nth-child(3n){background:#cad9e0}.reporter{color:#66767a;font-style:italic}.desert-quote{margin:25px 0;padding:23px 25px;border-left:6px solid var(--pc);border-radius:0 12px 12px 0;background:var(--pc-soft);font:1.14rem/1.65 Georgia,serif}
 @media(max-width:1000px){.legend-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.legend-grid,.adventure-grid{grid-template-columns:1fr}.legend-card{min-height:170px}.story-cover{min-height:250px}.gallery{grid-template-columns:1fr}.photo-slot{min-height:210px}}
+
+.gallery img {
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+}
